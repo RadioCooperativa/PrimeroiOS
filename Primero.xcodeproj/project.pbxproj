@@ -16,6 +16,7 @@
 		0768B5D31CF64EE300E48377 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0768B5D11CF64EE300E48377 /* LaunchScreen.storyboard */; };
 		0768B5DE1CF64EE300E48377 /* PrimeroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0768B5DD1CF64EE300E48377 /* PrimeroTests.m */; };
 		0768B5E91CF64EE300E48377 /* PrimeroUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0768B5E81CF64EE300E48377 /* PrimeroUITests.m */; };
+		0768B5F81CF660CA00E48377 /* prueba.m in Sources */ = {isa = PBXBuildFile; fileRef = 0768B5F71CF660CA00E48377 /* prueba.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		0768B5E41CF64EE300E48377 /* PrimeroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrimeroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0768B5E81CF64EE300E48377 /* PrimeroUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrimeroUITests.m; sourceTree = "<group>"; };
 		0768B5EA1CF64EE300E48377 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0768B5F61CF660CA00E48377 /* prueba.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prueba.h; sourceTree = "<group>"; };
+		0768B5F71CF660CA00E48377 /* prueba.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = prueba.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				0768B5D11CF64EE300E48377 /* LaunchScreen.storyboard */,
 				0768B5D41CF64EE300E48377 /* Info.plist */,
 				0768B5C01CF64EE300E48377 /* Supporting Files */,
+				0768B5F61CF660CA00E48377 /* prueba.h */,
+				0768B5F71CF660CA00E48377 /* prueba.m */,
 			);
 			path = Primero;
 			sourceTree = "<group>";
@@ -279,6 +284,7 @@
 				0768B5C81CF64EE300E48377 /* MasterViewController.m in Sources */,
 				0768B5C21CF64EE300E48377 /* main.m in Sources */,
 				0768B5CB1CF64EE300E48377 /* DetailViewController.m in Sources */,
+				0768B5F81CF660CA00E48377 /* prueba.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +510,7 @@
 				0768B5EF1CF64EE300E48377 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0768B5F01CF64EE300E48377 /* Build configuration list for PBXNativeTarget "PrimeroTests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +519,7 @@
 				0768B5F21CF64EE300E48377 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0768B5F31CF64EE300E48377 /* Build configuration list for PBXNativeTarget "PrimeroUITests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +528,7 @@
 				0768B5F51CF64EE300E48377 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
