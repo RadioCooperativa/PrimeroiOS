@@ -1,0 +1,527 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0768B5C21CF64EE300E48377 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0768B5C11CF64EE300E48377 /* main.m */; };
+		0768B5C51CF64EE300E48377 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0768B5C41CF64EE300E48377 /* AppDelegate.m */; };
+		0768B5C81CF64EE300E48377 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0768B5C71CF64EE300E48377 /* MasterViewController.m */; };
+		0768B5CB1CF64EE300E48377 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0768B5CA1CF64EE300E48377 /* DetailViewController.m */; };
+		0768B5CE1CF64EE300E48377 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0768B5CC1CF64EE300E48377 /* Main.storyboard */; };
+		0768B5D01CF64EE300E48377 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0768B5CF1CF64EE300E48377 /* Assets.xcassets */; };
+		0768B5D31CF64EE300E48377 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0768B5D11CF64EE300E48377 /* LaunchScreen.storyboard */; };
+		0768B5DE1CF64EE300E48377 /* PrimeroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0768B5DD1CF64EE300E48377 /* PrimeroTests.m */; };
+		0768B5E91CF64EE300E48377 /* PrimeroUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0768B5E81CF64EE300E48377 /* PrimeroUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0768B5DA1CF64EE300E48377 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0768B5B51CF64EE300E48377 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0768B5BC1CF64EE300E48377;
+			remoteInfo = Primero;
+		};
+		0768B5E51CF64EE300E48377 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0768B5B51CF64EE300E48377 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0768B5BC1CF64EE300E48377;
+			remoteInfo = Primero;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0768B5BD1CF64EE300E48377 /* Primero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Primero.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0768B5C11CF64EE300E48377 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0768B5C31CF64EE300E48377 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0768B5C41CF64EE300E48377 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0768B5C61CF64EE300E48377 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		0768B5C71CF64EE300E48377 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		0768B5C91CF64EE300E48377 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		0768B5CA1CF64EE300E48377 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		0768B5CD1CF64EE300E48377 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0768B5CF1CF64EE300E48377 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0768B5D21CF64EE300E48377 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0768B5D41CF64EE300E48377 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0768B5D91CF64EE300E48377 /* PrimeroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrimeroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0768B5DD1CF64EE300E48377 /* PrimeroTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrimeroTests.m; sourceTree = "<group>"; };
+		0768B5DF1CF64EE300E48377 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0768B5E41CF64EE300E48377 /* PrimeroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrimeroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0768B5E81CF64EE300E48377 /* PrimeroUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrimeroUITests.m; sourceTree = "<group>"; };
+		0768B5EA1CF64EE300E48377 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0768B5BA1CF64EE300E48377 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0768B5D61CF64EE300E48377 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0768B5E11CF64EE300E48377 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0768B5B41CF64EE300E48377 = {
+			isa = PBXGroup;
+			children = (
+				0768B5BF1CF64EE300E48377 /* Primero */,
+				0768B5DC1CF64EE300E48377 /* PrimeroTests */,
+				0768B5E71CF64EE300E48377 /* PrimeroUITests */,
+				0768B5BE1CF64EE300E48377 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0768B5BE1CF64EE300E48377 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0768B5BD1CF64EE300E48377 /* Primero.app */,
+				0768B5D91CF64EE300E48377 /* PrimeroTests.xctest */,
+				0768B5E41CF64EE300E48377 /* PrimeroUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0768B5BF1CF64EE300E48377 /* Primero */ = {
+			isa = PBXGroup;
+			children = (
+				0768B5C31CF64EE300E48377 /* AppDelegate.h */,
+				0768B5C41CF64EE300E48377 /* AppDelegate.m */,
+				0768B5C61CF64EE300E48377 /* MasterViewController.h */,
+				0768B5C71CF64EE300E48377 /* MasterViewController.m */,
+				0768B5C91CF64EE300E48377 /* DetailViewController.h */,
+				0768B5CA1CF64EE300E48377 /* DetailViewController.m */,
+				0768B5CC1CF64EE300E48377 /* Main.storyboard */,
+				0768B5CF1CF64EE300E48377 /* Assets.xcassets */,
+				0768B5D11CF64EE300E48377 /* LaunchScreen.storyboard */,
+				0768B5D41CF64EE300E48377 /* Info.plist */,
+				0768B5C01CF64EE300E48377 /* Supporting Files */,
+			);
+			path = Primero;
+			sourceTree = "<group>";
+		};
+		0768B5C01CF64EE300E48377 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0768B5C11CF64EE300E48377 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0768B5DC1CF64EE300E48377 /* PrimeroTests */ = {
+			isa = PBXGroup;
+			children = (
+				0768B5DD1CF64EE300E48377 /* PrimeroTests.m */,
+				0768B5DF1CF64EE300E48377 /* Info.plist */,
+			);
+			path = PrimeroTests;
+			sourceTree = "<group>";
+		};
+		0768B5E71CF64EE300E48377 /* PrimeroUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0768B5E81CF64EE300E48377 /* PrimeroUITests.m */,
+				0768B5EA1CF64EE300E48377 /* Info.plist */,
+			);
+			path = PrimeroUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0768B5BC1CF64EE300E48377 /* Primero */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0768B5ED1CF64EE300E48377 /* Build configuration list for PBXNativeTarget "Primero" */;
+			buildPhases = (
+				0768B5B91CF64EE300E48377 /* Sources */,
+				0768B5BA1CF64EE300E48377 /* Frameworks */,
+				0768B5BB1CF64EE300E48377 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Primero;
+			productName = Primero;
+			productReference = 0768B5BD1CF64EE300E48377 /* Primero.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0768B5D81CF64EE300E48377 /* PrimeroTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0768B5F01CF64EE300E48377 /* Build configuration list for PBXNativeTarget "PrimeroTests" */;
+			buildPhases = (
+				0768B5D51CF64EE300E48377 /* Sources */,
+				0768B5D61CF64EE300E48377 /* Frameworks */,
+				0768B5D71CF64EE300E48377 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0768B5DB1CF64EE300E48377 /* PBXTargetDependency */,
+			);
+			name = PrimeroTests;
+			productName = PrimeroTests;
+			productReference = 0768B5D91CF64EE300E48377 /* PrimeroTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0768B5E31CF64EE300E48377 /* PrimeroUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0768B5F31CF64EE300E48377 /* Build configuration list for PBXNativeTarget "PrimeroUITests" */;
+			buildPhases = (
+				0768B5E01CF64EE300E48377 /* Sources */,
+				0768B5E11CF64EE300E48377 /* Frameworks */,
+				0768B5E21CF64EE300E48377 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0768B5E61CF64EE300E48377 /* PBXTargetDependency */,
+			);
+			name = PrimeroUITests;
+			productName = PrimeroUITests;
+			productReference = 0768B5E41CF64EE300E48377 /* PrimeroUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0768B5B51CF64EE300E48377 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Innovación y Desarrollo";
+				TargetAttributes = {
+					0768B5BC1CF64EE300E48377 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					0768B5D81CF64EE300E48377 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 0768B5BC1CF64EE300E48377;
+					};
+					0768B5E31CF64EE300E48377 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 0768B5BC1CF64EE300E48377;
+					};
+				};
+			};
+			buildConfigurationList = 0768B5B81CF64EE300E48377 /* Build configuration list for PBXProject "Primero" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0768B5B41CF64EE300E48377;
+			productRefGroup = 0768B5BE1CF64EE300E48377 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0768B5BC1CF64EE300E48377 /* Primero */,
+				0768B5D81CF64EE300E48377 /* PrimeroTests */,
+				0768B5E31CF64EE300E48377 /* PrimeroUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0768B5BB1CF64EE300E48377 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0768B5D31CF64EE300E48377 /* LaunchScreen.storyboard in Resources */,
+				0768B5D01CF64EE300E48377 /* Assets.xcassets in Resources */,
+				0768B5CE1CF64EE300E48377 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0768B5D71CF64EE300E48377 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0768B5E21CF64EE300E48377 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0768B5B91CF64EE300E48377 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0768B5C51CF64EE300E48377 /* AppDelegate.m in Sources */,
+				0768B5C81CF64EE300E48377 /* MasterViewController.m in Sources */,
+				0768B5C21CF64EE300E48377 /* main.m in Sources */,
+				0768B5CB1CF64EE300E48377 /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0768B5D51CF64EE300E48377 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0768B5DE1CF64EE300E48377 /* PrimeroTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0768B5E01CF64EE300E48377 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0768B5E91CF64EE300E48377 /* PrimeroUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0768B5DB1CF64EE300E48377 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0768B5BC1CF64EE300E48377 /* Primero */;
+			targetProxy = 0768B5DA1CF64EE300E48377 /* PBXContainerItemProxy */;
+		};
+		0768B5E61CF64EE300E48377 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0768B5BC1CF64EE300E48377 /* Primero */;
+			targetProxy = 0768B5E51CF64EE300E48377 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0768B5CC1CF64EE300E48377 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0768B5CD1CF64EE300E48377 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0768B5D11CF64EE300E48377 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0768B5D21CF64EE300E48377 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0768B5EB1CF64EE300E48377 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0768B5EC1CF64EE300E48377 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0768B5EE1CF64EE300E48377 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Primero/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cl.cooperativa.Primero;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0768B5EF1CF64EE300E48377 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Primero/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cl.cooperativa.Primero;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		0768B5F11CF64EE300E48377 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PrimeroTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cl.cooperativa.PrimeroTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Primero.app/Primero";
+			};
+			name = Debug;
+		};
+		0768B5F21CF64EE300E48377 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PrimeroTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cl.cooperativa.PrimeroTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Primero.app/Primero";
+			};
+			name = Release;
+		};
+		0768B5F41CF64EE300E48377 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PrimeroUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cl.cooperativa.PrimeroUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Primero;
+			};
+			name = Debug;
+		};
+		0768B5F51CF64EE300E48377 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PrimeroUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cl.cooperativa.PrimeroUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Primero;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0768B5B81CF64EE300E48377 /* Build configuration list for PBXProject "Primero" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0768B5EB1CF64EE300E48377 /* Debug */,
+				0768B5EC1CF64EE300E48377 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0768B5ED1CF64EE300E48377 /* Build configuration list for PBXNativeTarget "Primero" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0768B5EE1CF64EE300E48377 /* Debug */,
+				0768B5EF1CF64EE300E48377 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0768B5F01CF64EE300E48377 /* Build configuration list for PBXNativeTarget "PrimeroTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0768B5F11CF64EE300E48377 /* Debug */,
+				0768B5F21CF64EE300E48377 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0768B5F31CF64EE300E48377 /* Build configuration list for PBXNativeTarget "PrimeroUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0768B5F41CF64EE300E48377 /* Debug */,
+				0768B5F51CF64EE300E48377 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0768B5B51CF64EE300E48377 /* Project object */;
+}
