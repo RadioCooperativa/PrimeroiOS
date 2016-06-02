@@ -21,6 +21,9 @@
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dil-Cj-x9d">
                                 <rect key="frame" x="524" y="27" width="56" height="30"/>
                                 <state key="normal" title="Guardar"/>
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DLO-j3-x8Y"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Escribir Tarea" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U8W-ti-h0V">
                                 <rect key="frame" x="20" y="28" width="490" height="30"/>
@@ -45,6 +48,10 @@
                             <constraint firstAttribute="leadingMargin" secondItem="U8W-ti-h0V" secondAttribute="leading" id="rDU-1t-RRc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="itemTextField" destination="U8W-ti-h0V" id="TR3-A5-sHq"/>
+                        <outlet property="tableView" destination="bPm-Ym-EMs" id="dLH-T7-7S0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
