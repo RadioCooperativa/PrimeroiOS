@@ -92,4 +92,22 @@ extension TodoList: UITableViewDataSource {
         cell.textLabel!.text = item
         return cell
     }
+    
+    //Funciones para borrar elementos de una tabla.
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+            }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        items.removeAtIndex(indexPath.row)
+        saveItems()
+    //iniciar animacion
+        tableView.beginUpdates()
+        
+        tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Middle)
+        tableView.endUpdates()
+        
+    }
 }
