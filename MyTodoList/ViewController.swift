@@ -56,7 +56,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITextFieldDelegate
         //self.todoList.getItem(indexPath.row)
         
        self.selectedItem = self.todoList.getItem(indexPath.row)
-       self.performSegueWithIdentifier("showItem", sender: self)
+        
+        //abrimos la ventana a traves del nombre de la relación, es decir a través del storyboard
+        
+        //se recomienda hacerlo por interfaz gráfica, dado que el código ya está muy optimizado y no existe diferencia desfavorable con la manera programática.
+        self.performSegueWithIdentifier("showItem", sender: self)
+        
+        
+        
+        //Para abrir por codigo otra ventana
+        /*let detailVC = ViewController()
+        detailVC.item = self.selectedItem
+        self.navigationController?.pushViewController(detailVC, animated: true)*/
         
     }
     
