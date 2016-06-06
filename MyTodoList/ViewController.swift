@@ -48,6 +48,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITextFieldDelegate
         self.itemTextField?.resignFirstResponder()
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        self.performSegueWithIdentifier("showItem", sender: self)
+    }
+    
     //MARK: Metodos de text field delegate
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool{
     

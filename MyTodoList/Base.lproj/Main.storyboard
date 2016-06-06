@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="e7P-4I-zSP">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -7,6 +7,40 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="8Bi-1S-Vpt">
+            <objects>
+                <viewController id="hwm-Th-UCi" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PoT-kK-6k1"/>
+                        <viewControllerLayoutGuide type="bottom" id="VWo-Sq-72T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cC1-YU-Rfx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="acd-SE-1zy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1093" y="295"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CBe-uJ-EuS">
+            <objects>
+                <navigationController id="e7P-4I-zSP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9gj-g6-Kyz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="PrA-oI-SDY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W8K-A9-WEt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-263" y="295"/>
+        </scene>
+        <!--Lista de Tareas-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyTodoList" customModuleProvider="target" sceneMemberID="viewController">
@@ -51,9 +85,11 @@
                             <constraint firstAttribute="leadingMargin" secondItem="U8W-ti-h0V" secondAttribute="leading" id="rDU-1t-RRc"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Lista de Tareas" id="w74-PR-QrH"/>
                     <connections>
                         <outlet property="itemTextField" destination="U8W-ti-h0V" id="TR3-A5-sHq"/>
                         <outlet property="tableView" destination="bPm-Ym-EMs" id="dLH-T7-7S0"/>
+                        <segue destination="hwm-Th-UCi" kind="show" identifier="showItem" id="tbf-9Y-ymH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
