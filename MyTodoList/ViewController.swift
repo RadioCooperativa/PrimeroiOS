@@ -14,6 +14,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITextFieldDelegate
     @IBOutlet weak var tableView: UITableView!
     
     let todoList = TodoList()
+    
+    var selectedItem: String?
     static let MAX_TEXT_SIZE = 5
     
     @IBAction func addButtonPressed (sender: UIButton){
@@ -50,7 +52,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITextFieldDelegate
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        self.performSegueWithIdentifier("showItem", sender: self)
+        //aqui lo extraemos, debemos pasarlo a nuestro ViewController       
+        //self.todoList.getItem(indexPath.row)
+        
+       self.selectedItem = self.todoList.getItem(indexPath.row)
+       self.performSegueWithIdentifier("showItem", sender: self)
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let detailViewController = segue.destinationViewController as?
+            DetailViewController {
+            detailViewController.item = self.selectedItem
+        
+        }
     }
     
     //MARK: Metodos de text field delegate

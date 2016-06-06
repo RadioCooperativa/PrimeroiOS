@@ -15,6 +15,7 @@
 		0740F49F1CF8D881007ABEE1 /* MyTodoListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0740F49E1CF8D881007ABEE1 /* MyTodoListTests.swift */; };
 		0740F4AA1CF8D882007ABEE1 /* MyTodoListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0740F4A91CF8D882007ABEE1 /* MyTodoListUITests.swift */; };
 		0761DEFC1D008B000037659B /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0761DEFB1D008B000037659B /* TodoList.swift */; };
+		07D3FE381D05F0E500FA357D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D3FE371D05F0E500FA357D /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		0740F4A91CF8D882007ABEE1 /* MyTodoListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTodoListUITests.swift; sourceTree = "<group>"; };
 		0740F4AB1CF8D882007ABEE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0761DEFB1D008B000037659B /* TodoList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
+		07D3FE371D05F0E500FA357D /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				0740F4901CF8D881007ABEE1 /* Assets.xcassets */,
 				0740F4921CF8D881007ABEE1 /* LaunchScreen.storyboard */,
 				0740F4951CF8D881007ABEE1 /* Info.plist */,
+				07D3FE371D05F0E500FA357D /* DetailViewController.swift */,
 			);
 			path = MyTodoList;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				0761DEFC1D008B000037659B /* TodoList.swift in Sources */,
 				0740F48C1CF8D881007ABEE1 /* ViewController.swift in Sources */,
 				0740F48A1CF8D881007ABEE1 /* AppDelegate.swift in Sources */,
+				07D3FE381D05F0E500FA357D /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
