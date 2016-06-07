@@ -17,6 +17,27 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     
     
+    @IBAction func dateSelected(sender: UIDatePicker) {
+       //imprime en consola
+        print ("Fecha Seleccionada: \(sender.date)")
+        
+        //muestra en label la fecha seleccionada
+       // self.dateLabel.text = sender.date.description
+        
+    // Muestra en el label la fecha seleccionada, pero con el formato establecido en la funcion formatDate
+        
+        self.dateLabel.text = formatDate(sender.date)
+    }
+    
+    func formatDate (date: NSDate) -> String {
+    let formatter = NSDateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy HH:mm"
+        
+        return formatter.stringFromDate(date)
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        

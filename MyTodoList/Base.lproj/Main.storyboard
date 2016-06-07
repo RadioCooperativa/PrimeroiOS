@@ -58,15 +58,30 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="HXy-9t-hB8">
+                                <rect key="frame" x="0.0" y="372" width="600" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="7GS-eh-iYX"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="487012039.472323">
+                                    <!--2016-06-07 17:07:19 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="dateSelected:" destination="hwm-Th-UCi" eventType="valueChanged" id="aOI-rx-5T6"/>
+                                </connections>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Li0-hC-TjP" secondAttribute="trailing" id="1Im-xM-9h8"/>
                             <constraint firstItem="Li0-hC-TjP" firstAttribute="top" secondItem="PoT-kK-6k1" secondAttribute="bottom" id="81Z-b7-zbR"/>
                             <constraint firstItem="VWo-Sq-72T" firstAttribute="top" secondItem="Li0-hC-TjP" secondAttribute="bottom" constant="200" id="Aw6-Xr-YWX"/>
+                            <constraint firstItem="HXy-9t-hB8" firstAttribute="top" secondItem="Li0-hC-TjP" secondAttribute="bottom" id="Bm1-HC-ltb"/>
                             <constraint firstItem="Li0-hC-TjP" firstAttribute="height" secondItem="cC1-YU-Rfx" secondAttribute="height" id="MdV-cu-Pbp"/>
                             <constraint firstItem="Li0-hC-TjP" firstAttribute="height" secondItem="cC1-YU-Rfx" secondAttribute="height" multiplier="0.5" id="SS2-WD-81i"/>
                             <constraint firstItem="Li0-hC-TjP" firstAttribute="leading" secondItem="cC1-YU-Rfx" secondAttribute="leading" id="g50-2a-akq"/>
+                            <constraint firstAttribute="trailing" secondItem="HXy-9t-hB8" secondAttribute="trailing" id="y8y-xK-N9F"/>
+                            <constraint firstItem="HXy-9t-hB8" firstAttribute="leading" secondItem="cC1-YU-Rfx" secondAttribute="leading" id="yNh-dZ-Frn"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
