@@ -89,6 +89,13 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="Lmf-5b-k2W">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="A2D-Er-WyL">
+                            <connections>
+                                <action selector="addnotification:" destination="hwm-Th-UCi" id="YuS-hk-4yt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="dateLabel" destination="T9k-HE-YYA" id="bPM-TP-A4s"/>
                         <outlet property="descriptionLabel" destination="qsg-Id-54E" id="sj0-Pv-1ad"/>
