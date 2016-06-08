@@ -36,7 +36,9 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func dateSelected(sender: UIDatePicker) {
-       //imprime en consola
+       //se ejecuta cuando termina de elegir el usuario
+        
+        //imprime en consola
         print ("Fecha Seleccionada: \(sender.date)")
         
         //muestra en label la fecha seleccionada
@@ -45,6 +47,21 @@ class DetailViewController: UIViewController {
     // Muestra en el label la fecha seleccionada, pero con el formato establecido en la funcion formatDate
         
         self.dateLabel.text = formatDate(sender.date)
+        self.datePicker.hidden = true
+    }
+    
+    
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
+    @IBAction func addImage(sender: UIBarButtonItem) {
+        
+        let imagePickerController = UIImagePickerController ()
+        imagePickerController.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        
+        //presentar el viewcontroller
+        self.presentViewController(imagePickerController, animated: true, completion:nil)
+       
+        
     }
     
     func formatDate (date: NSDate) -> String {
@@ -69,7 +86,24 @@ class DetailViewController: UIViewController {
         //solo para mostrar por consola lo que se imprime
         print ("Item \(item)")
         self.descriptionLabel.text = item
+        
+        let tapGestureRecognizer = UITapGestureRecognizer()
+        
+        tapGestureRecognizer.numberOfTapsRequired = 1 //detectar un toque
+        tapGestureRecognizer.numberOfTouchesRequired = 1 //detectar cuantos dedos simultaneos habran en la pantalla -->se activa.
+        
+        tapGestureRecognizer.addTarget(self, action: "toggleDatePicker") //decir cuando detectes un toque invocas el self y a la accion metodo de su viewcontroller, mostrar y esconder datepicker
+        
+        self.dateLabel.addGestureRecognizer(tapGestureRecognizer)
+        
+        self.dateLabel.userInteractionEnabled = true
+        
+        
         // Do any additional setup after loading the view.
+    }
+    
+    func toggleDatePicker() {
+        self.datePicker.hidden = !self.datePicker.hidden
     }
 
     override func didReceiveMemoryWarning() {
@@ -78,14 +112,5 @@ class DetailViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+   
 }
