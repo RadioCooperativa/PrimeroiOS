@@ -8,7 +8,8 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+//tenemos que implementar el ImagePickerControllerDelegate e implementar el NavigationCOntrollerDelegate
+class DetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var item: String?
 
@@ -48,9 +49,11 @@ class DetailViewController: UIViewController {
         
         self.dateLabel.text = formatDate(sender.date)
         self.datePicker.hidden = true
+        toggleDatePicker()
     }
     
     
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var datePicker: UIDatePicker!
     
     @IBAction func addImage(sender: UIBarButtonItem) {
@@ -58,9 +61,11 @@ class DetailViewController: UIViewController {
         let imagePickerController = UIImagePickerController ()
         imagePickerController.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         
+        
+        imagePickerController.delegate = self //yo soy el delegado
+        
         //presentar el viewcontroller
         self.presentViewController(imagePickerController, animated: true, completion:nil)
-       
         
     }
     
@@ -103,6 +108,7 @@ class DetailViewController: UIViewController {
     }
     
     func toggleDatePicker() {
+        self.imageView.hidden = self.datePicker.hidden
         self.datePicker.hidden = !self.datePicker.hidden
     }
 
@@ -111,6 +117,20 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //siempre que se crea un metodo de un delegado se debe de colocar un MARK para que sea facil encontrarlo
+    
+    //MARK: Image Picker Controller Metodo
+        func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+            
+            //aqui recuperamos la imagen
+            if let image = info [UIImagePickerControllerOriginalImage] as? UIImage{
+            
+                self.imageView.image = image
+                
+            }
+            self.dismissViewControllerAnimated(true, completion: nil)
+            
+    }
 
    
 }

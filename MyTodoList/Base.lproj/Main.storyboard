@@ -126,6 +126,7 @@
                         <outlet property="dateLabel" destination="T9k-HE-YYA" id="bPM-TP-A4s"/>
                         <outlet property="datePicker" destination="HXy-9t-hB8" id="xgX-pm-svP"/>
                         <outlet property="descriptionLabel" destination="qsg-Id-54E" id="sj0-Pv-1ad"/>
+                        <outlet property="imageView" destination="q6t-gT-Iu9" id="X9c-d5-xDf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="acd-SE-1zy" userLabel="First Responder" sceneMemberID="firstResponder"/>
