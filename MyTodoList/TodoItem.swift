@@ -16,6 +16,8 @@ class TodoItem: NSObject, NSCoding {
     
     var image: UIImage?
     
+    var id: Int64?
+    
     //inicializador que no recibe argumentos
     //solo manda a llamar al de la superclase
     override init() {
@@ -45,10 +47,20 @@ class TodoItem: NSObject, NSCoding {
             self.dueDate = date
         }
         
+       
+        
         if let img = aDecoder.decodeObjectForKey("image") as? UIImage{
             //recuperamos la imagen
             self.image = img
             
+        }
+        
+        //nunca regresa un optional solo un 0 si es que no lo encuentra
+        //por eso no va el if
+        
+        let identifier = aDecoder.decodeInt64ForKey("identifier")
+        if identifier != 0 {
+        self.id=identifier
         }
         
         
@@ -77,9 +89,34 @@ class TodoItem: NSObject, NSCoding {
             aCoder.encodeObject(img, forKey: "image")
             //el nombre con el que se guarda es el mismo con el que se tiene que recuperar
             
-            
         }
         
+        if let indentifier = self.id{
+            aCoder.encodeInt64(indentifier, forKey: "identifier")
+        }
+        
+    }
+    
+    class func parse(result: [Dictionary<String, AnyObject>]) -> [TodoItem] {
+        var items = [TodoItem]()
+        for dict in result {
+            let item = TodoItem()
+            if let message = dict["message"] as? String {
+                item.todo = message
+            }
+            if let identifier = dict["id"] as? NSNumber {
+                item.id = identifier.longLongValue
+            }
+            if let dateStr = dict["dueDate"] as? String {
+                let dateFormatter = NSDateFormatter()
+                dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
+                if let date = dateFormatter.dateFromString(dateStr) {
+                    item.dueDate = date
+                }
+            }
+            items.append(item)
+        }
+        return items
     }
     
 }

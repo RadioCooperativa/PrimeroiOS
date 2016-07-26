@@ -25,6 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //si el usuario abre la app debe desaparecer el BadgeNumber 1
         
         UIApplication.sharedApplication().applicationIconBadgeNumber = 0
+        
+        print(API.uniqueUsername())
         return true
     }
 

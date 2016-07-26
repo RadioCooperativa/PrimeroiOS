@@ -26,14 +26,41 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var dateLabel: UILabel!
     
     @IBAction func addnotification(sender: UIBarButtonItem) {
+       
         if let dateString = self.dateLabel.text {
           if let date = parseDate(dateString){
             self.item?.dueDate = date //->se guarda en TodoItem
             self.todoList?.saveItems() //->Guardo en disco
             //scheduleNotification(self.item!, date: date)
             scheduleNotification(self.item!.todo!, date: date)
-                }
+            
+            API.save(item!, todoList: todoList!, responseBlock: { (error) -> Void in
+                dispatch_async(dispatch_get_main_queue(), {
+                    //todo lo que se ejecuta en este bloque se va a ejecutar en el thread principal
+                    if let err = error {
+                        print(err)
+                        self.showError()
+                        
+                    } else {
+                        self.navigationController?.popToRootViewControllerAnimated(true)
+                    }
+                    
+                })
+            })
+            
             }
+        }
+    }
+    
+    func showError() {
+        let alert = UIAlertController(title: "Oops!", message:"No pudimos guardar tu tarea en este momento. Revisa tu conexión a internet e intenta más tarde", preferredStyle: .Alert)
+        //cuando le den tap al boton de la alerta
+        let action = UIAlertAction(title: "OK", style: .Default) {
+            _ in
+            self.navigationController?.popToRootViewControllerAnimated(true)
+        }
+        alert.addAction(action)
+        self.presentViewController(alert, animated: true, completion: nil)
     }
     
     func scheduleNotification(message: String, date: NSDate){
