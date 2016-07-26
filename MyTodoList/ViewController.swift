@@ -15,12 +15,25 @@ class ViewController: UIViewController, UITableViewDelegate, UITextFieldDelegate
     
     let todoList = TodoList()
     
-    var selectedItem: String?
+   // var selectedItem: String?
+    
+    var selectedItem: TodoItem?
+    
     static let MAX_TEXT_SIZE = 5
     
     @IBAction func addButtonPressed (sender: UIButton){
     print ("Agregando un elemento a la lista : \(itemTextField.text)")
-        todoList.addItem(itemTextField.text!) //con el signo ! sacamos el valor de la caja de texto
+        
+        //agregando un todoItem para persistencia en disco con NSCoding
+        
+        let todoItem = TodoItem()
+        todoItem.todo = itemTextField.text
+        
+        //todoList.addItem(itemTextField.text!) 
+        //con el signo ! sacamos el valor de la caja de texto
+        
+        todoList.addItem(todoItem)
+        
         tableView.reloadData()//cada ves que agregue un elemento el tableview actualice la informacion
         self.itemTextField?.text = nil //borar campo de texto
         self.itemTextField?.resignFirstResponder()
@@ -75,6 +88,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITextFieldDelegate
         if let detailViewController = segue.destinationViewController as?
             DetailViewController {
             detailViewController.item = self.selectedItem
+            detailViewController.todoList = self.todoList
+            
         
         }
     }

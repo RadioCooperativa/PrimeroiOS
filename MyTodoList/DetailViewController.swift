@@ -8,10 +8,18 @@
 
 import UIKit
 
-//tenemos que implementar el ImagePickerControllerDelegate e implementar el NavigationCOntrollerDelegate
+        //tenemos que implementar el ImagePickerControllerDelegate e implementar el NavigationCOntrollerDelegate
 class DetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    var item: String?
+    //var item: String? ->para arreglos
+    
+    var item: TodoItem?
+    
+    //son opcionales (?), porque al principio no va a existir y luego le voy a pasar el
+    //valor
+    
+    var todoList: TodoList?
+    
 
     @IBOutlet weak var descriptionLabel: UILabel!
     
@@ -20,7 +28,10 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBAction func addnotification(sender: UIBarButtonItem) {
         if let dateString = self.dateLabel.text {
           if let date = parseDate(dateString){
-            scheduleNotification(self.item!, date: date)
+            self.item?.dueDate = date //->se guarda en TodoItem
+            self.todoList?.saveItems() //->Guardo en disco
+            //scheduleNotification(self.item!, date: date)
+            scheduleNotification(self.item!.todo!, date: date)
                 }
             }
     }
@@ -85,12 +96,14 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     
-    override func viewDidLoad() {
+    override func viewDidLoad() //cuando se esta cargando mi pantalla
+    {
         super.viewDidLoad()
        
         //solo para mostrar por consola lo que se imprime
         print ("Item \(item)")
-        self.descriptionLabel.text = item
+        //self.descriptionLabel.text = item
+        showItem()
         
         let tapGestureRecognizer = UITapGestureRecognizer()
         
@@ -103,19 +116,118 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         self.dateLabel.userInteractionEnabled = true
         
+        self.addGestureRecognizerToImage()
         
         // Do any additional setup after loading the view.
     }
     
+    
+    func showItem() {
+    self.descriptionLabel.text = item?.todo
+        if let date = item?.dueDate {
+        let formatter = NSDateFormatter()
+            formatter.dateFormat = "dd/MM/yyyy HH:mm"
+            self.dateLabel.text = formatter.stringFromDate(date)
+                }
+        
+        if let img = item?.image
+        {
+            self.imageView.image = img
+        
+        }
+    
+    }
+        
+    func addGestureRecognizerToImage(){
+    let gr = UITapGestureRecognizer()
+        gr.numberOfTapsRequired = 1 //un solo toque
+        gr.numberOfTouchesRequired = 1 //un solo dedo
+        gr.addTarget(self, action: "rotate") //cuando detecte el toque ejecute el metodo rotate
+        
+        self.imageView.userInteractionEnabled = true //activar bandera userInteractionEnabled para activar los toques en vistas
+        
+        self.imageView.addGestureRecognizer (gr) //al imageview le pasamos nuestro recognizer con nuestro metodo addGestureRecongnizer
+        
+    }
+    
+    func rotate(){ //rotar imagen
+        let animation = CABasicAnimation()
+        animation.keyPath = "transform.rotation"
+        animation.toValue = M_PI * 2.0
+        animation.duration = 1
+       // animation.repeatCount = 5
+        self.imageView.layer.addAnimation(animation, forKey: "rotateanimation")
+    
+    }
+    
+  
+    
     func toggleDatePicker() {
-        self.imageView.hidden = self.datePicker.hidden
-        self.datePicker.hidden = !self.datePicker.hidden
+        
+       //asi llamamos a los bloques creados de CoreAnimation
+        if self.datePicker.hidden {
+                self.fadeInDatePicker()
+            
+        } else {
+                self.fadeOutDatePicker()
+        }
+        
+        
+        
+        //lo comentamos para mandar a llamar los bloques creados
+          //fadeInDatePicker() y fadeOutDatePicker()
+        
+        //self.imageView.hidden = self.datePicker.hidden
+        //self.datePicker.hidden = !self.datePicker.hidden
+        
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    
+    //************************************//
+    //MARK: Animaciones
+    
+    //mostrar el DatePicker
+    
+    func fadeInDatePicker() {
+    
+        //poner valor inicial del componente que voy animar
+            self.datePicker.alpha = 0 // --> 0 totalmente transparente
+        
+            self.datePicker.hidden = false // --> que no este escondido
+        
+        UIView.animateWithDuration(1) { () -> Void in
+            self.datePicker.alpha = 1
+            self.imageView.alpha = 0
+           
+        }
+    }
+    
+    //esconder el datePicker
+    func fadeOutDatePicker() {
+        self.datePicker.alpha = 1
+        self.datePicker.hidden = false
+        
+        UIView.animateWithDuration(1, animations: { () -> Void in
+        self.datePicker.alpha = 0
+        self.imageView.alpha = 1
+           
+        
+        }) { (completed) -> Void in//se ejecuta cuando la animacion ya termino
+            if completed {
+            self.datePicker.hidden = true
+            }
+            
+        }
+    }
+    //************************************//
+    
     
     //siempre que se crea un metodo de un delegado se debe de colocar un MARK para que sea facil encontrarlo
     
@@ -124,7 +236,8 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
             
             //aqui recuperamos la imagen
             if let image = info [UIImagePickerControllerOriginalImage] as? UIImage{
-            
+                self.item?.image = image
+                self.todoList?.saveItems()
                 self.imageView.image = image
                 
             }
