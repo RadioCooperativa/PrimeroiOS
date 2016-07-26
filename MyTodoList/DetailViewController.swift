@@ -155,7 +155,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         animation.keyPath = "transform.rotation"
         animation.toValue = M_PI * 2.0
         animation.duration = 1
-       // animation.repeatCount = 5
+       //ls animation.repeatCount = 5
         self.imageView.layer.addAnimation(animation, forKey: "rotateanimation")
     
     }
